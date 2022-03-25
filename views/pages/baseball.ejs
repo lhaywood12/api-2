@@ -1,0 +1,23 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-baseballs">
+    <h2 class="main-h2"><%= name %></h2>
+    <section class="section section-baseball">
+        <% data.forEach(item => { %>
+            <figure class="figure baseball-figure">
+                <a href ="/baseball/<%= item.id %>">
+                    <% console.log(item) %> 
+                    <figcaption class="figcaption"><%= item.Player %>
+                    </figcaption>
+                </a>
+                <p><%= item.Throws %></p>
+                <p><%= item.Rank %></p>
+                <p><%= item.YearsAge %></p>
+                <p><%= item.Hits %></p>
+                <p><%= item.id %></p>
+            </figure>
+        <% }) %>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
